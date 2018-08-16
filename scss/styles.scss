@@ -1,0 +1,70 @@
+@charset 'UTF-8';
+
+// 1. Vendors
+@import
+    '00-vendor/normalize';
+
+// 1. Settings – used with preprocessors and contain font, colors definitions, etc.
+@import
+    '01-settings/vars',
+    '01-settings/typography',
+    '01-settings/space',
+    '01-settings/colors';
+
+// 2. Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+@import
+    '02-tools/media-queries',
+    '02-tools/functions',
+    '02-tools/mixins';
+
+// 3.Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+@import
+    '03-generic/base';
+
+// 04.Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+@import
+    '04-elements/container',
+    '04-elements/headings';
+
+
+// 05.Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+@import
+    '05-objects/page',
+    '05-objects/Bottom',
+    '05-objects/Logo',
+    '05-objects/Navbar',
+    '05-objects/btn',
+    '05-objects/preloader';
+
+// 06. Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+
+@import
+    '06-components/HeroImage',
+    '06-components/Facility',
+    '06-components/Access',
+    '06-components/Cover',
+    '06-components/RoomPics',
+    '06-components/Features',
+    '06-components/Dropdown',
+    '06-components/MultiTimeTable',
+    '06-components/Table',
+    '06-components/AccessMap',
+    '06-components/Amenities',
+    '06-components/ContactForm',
+    '06-components/MobileMenu',
+    '06-components/RoomAgenda',
+    '06-components/Services',
+    '06-components/CTA';
+
+// 07. Utilities– utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+@import
+    '07-utilities/ui',
+    '07-utilities/animations',
+    '07-utilities/state',
+    '07-utilities/utilities';
+
+// 08. Shame Folder
+@import
+    '08-shame/shame';
+
+  // const constants = require('./constants.js');

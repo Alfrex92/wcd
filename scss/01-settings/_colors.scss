@@ -1,0 +1,51 @@
+// $vars: (
+//   primary: #434343,
+//   secondary: #DEDEDE,
+//   accent: #D4671F,
+// );
+//
+// $primary: map-get($vars,primary);
+// $secondary: map-get($vars,secondary);
+// $accent: map-get($vars,accent);
+//
+// :root {
+//   @each $key, $value in $vars {
+//     --#{$key}: $value;
+//   }
+// }
+
+
+/// Function to get the color
+$colors: (
+  pink  : (
+    // base: rgba(255,51,102,0.70),
+    base : #FF3366,
+    dark: darken(#FF3366,10),
+    light: lighten(#FF3366,20)
+  ),
+  green : (
+    base: #00D664,
+    secondary: #00C69A,
+    light: lighten(#44BBFF,20)
+  ),
+  blue : (
+    base: #00B2C8,
+    secondary: #44BBFF,
+    light: lighten(#44BBFF,20)
+  ),
+  gray : (
+  light: #F5F5F5,
+    base:#424242,
+    secondary: #9B9B9B
+  ),
+  white : (
+    base: white
+  )
+);
+
+
+@function colors-map($map, $key, $subkey) {
+  $submap: map-get($map, $key);
+  $value: map-get($submap, $subkey);
+  @return $value;
+}

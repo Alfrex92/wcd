@@ -1,0 +1,41 @@
+
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  @include medium-screen {
+       width: 46.75rem;
+  }
+  @include large-screen {
+      width: 60.625rem;
+  }
+  @include extra-large-screen {
+      width: 73.125rem;
+  }
+}
+
+.break {
+    display: block;
+}
+.breakSmall {
+    display: block;
+    @include large-screen {
+        display: inline-block;
+    }
+}
+
+.breakResponsive {
+    @include large-screen {
+        display: block;
+    }
+}
+
+.ComponentSeparation {
+    margin-bottom: $space-l;
+    @include large-screen {
+        margin-bottom: $space-xl;
+    }
+}
+
+
+

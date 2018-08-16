@@ -1,0 +1,40 @@
+.Bottom {
+    background: #373737;
+    font-size: 1rem;
+    color:white;
+
+    &-container {
+        display: flex;
+        margin: 0 auto;
+        max-width: 75rem;
+        flex-direction: column;
+        padding: $space-m;
+        @include large-screen {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .Btn {
+                width: auto;
+            }
+        }
+
+    }
+    &-link {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+    &-right, &-left {
+        flex-basis: 50%;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-icon {
+        display: inline-block;
+        transform: translateY(3px);
+        padding: 0 $space-xs;
+        font-size: 1rem;
+    }
+}

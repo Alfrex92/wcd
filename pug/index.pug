@@ -1,0 +1,49 @@
+extends templates/template.pug
+
+block content
+    header
+        navbar.Navbar
+            .Logo
+                img.Logo-img
+            a.Btn-link(href="") 問い合わせ
+    main
+        .container
+            section.Company.ComponentSeparation
+                .Company-description
+                    p WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、
+                        | ワーキングホリデーを利用した、
+                        | まったく新しい​​仕事と生き方へのチャレンジ
+                        | をサポートする一般社団法人です。
+            section.Target.ComponentSeparation
+                h2.Target-title.t2 こんな方が対象
+                ul.Target-list
+                    li.Target-item 単なる観光ではなく”海外生活”を体験したい
+                    li.Target-item 海外にも、いつでも帰れる第二のふるさとを持ちたい
+                    li.Target-item しっかりとした英語や現場で通用するビジネス英語を身につけたい
+            section.Stagger.ComponentSeparation
+                h2.Stagger-title.t2 ワーキングホリデープログラムの内容
+                .Stagger-description
+                    p 本プログラムでは、ワーキングホリデーをする際のお仕事や下宿先をご用意させていただいています。
+                        | お仕事については下記のコースがございます。
+                .Stagger-list
+                    .Stagger-item
+                        .Stagger-picture.Stagger--barista
+                        p.Stagger-option バリスタ
+                    .Stagger-item
+                        .Stagger-picture.Stagger--teacher
+                        p.Stagger-option 日本語教師
+                    .Stagger-item
+                        .Stagger-picture.Stagger--intern
+                        p.Stagger-option ビジネスインターン
+                    .Stagger-item
+                        .Stagger-picture.Stagger--massagist
+                        p.Stagger-option ナチュラルセラピー、マッサージセラピスト
+                p.Stagger-extra *その他、特定の職種について希望があればコンサルティングも受け付けます
+        section.CTA  
+            .container.CTA-body
+            p What are you waiting?
+            p Let’s work in Australia 
+            a.Btn-link(href="") 問い合わせ      
+
+
+            

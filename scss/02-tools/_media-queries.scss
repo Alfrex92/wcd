@@ -1,0 +1,20 @@
+// 768px
+
+@mixin medium-screen () {
+  @media  screen and (min-width: 48em) {
+    @content;
+  }
+}
+///  992px
+@mixin large-screen () {
+  @media screen and (min-width: 62em) {
+    @content;
+  }
+}
+
+/// 1200px
+@mixin extra-large-screen () {
+  @media  screen and (min-width: 75em) {
+    @content;
+  }
+}

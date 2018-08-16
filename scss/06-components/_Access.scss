@@ -1,0 +1,18 @@
+.Access {
+    &-map {
+        margin-bottom: $space-m;
+        @include large-screen { 
+            height: 250px;
+        }
+    }
+    &-container {
+        text-align: center;
+    }
+    &-link {
+        color: colors-map($colors,blue,secondary);
+        &:hover {
+            color: colors-map($colors,blue,base);
+
+        }
+    }
+}

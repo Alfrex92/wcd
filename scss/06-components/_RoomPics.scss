@@ -1,0 +1,24 @@
+.RoomPics {
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-item {
+        flex-basis: 100%;
+        line-height: 0;
+        margin-bottom: $space-m;
+        @include large-screen { 
+            flex-basis: 48%;
+        }
+    }
+    &-img {
+        border-radius: $space-s;
+        width: 100%;
+        height: 200px;
+        @include large-screen { 
+            height: 250px;
+        }
+    }
+}

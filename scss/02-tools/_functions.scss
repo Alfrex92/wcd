@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+@function em($element, $context:16px) {
+  @return ($element / $context) * 1em;
+}
+
+// Convert px to rem
+@function rem($el) {
+  @return ($el / 16px) * 1rem;
+}
+
+@function use-img($image) {
+  @return url('img/' + $image);
+}
+
+$z-index: (
+  'one' : 1,
+  'ten' : 10,
+  'alpha': 100,
+  'beta': 500,
+  'gamma': 700,
+  'menu': 800,
+  'navbar': 900,
+  'offcanvas': 1000,
+  'modal': 1100,
+  'preloader': 1200,
+);
+
+@function z-index($val) {
+  @return map-get($z-index,$val);
+}

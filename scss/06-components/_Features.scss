@@ -1,0 +1,98 @@
+.Features {
+    text-align: center;
+    &-description {
+        @include large-screen { 
+            flex-basis: 50%;
+            order: 2;
+        }
+    }
+    &-photo {
+        flex-basis: 48%;
+        order: 2;
+       
+    }
+    &-one {
+        display: flex;
+        flex-direction: column;
+        @include large-screen { 
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &-illustration {
+        @include large-screen { 
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-br {
+        display: block;
+    }
+    &-two {
+        h3 {
+            margin-bottom: $space-m;
+        }
+    }
+    &-img {
+        width: 100%;
+        height: 40vh;
+        max-height: 200px;
+        max-width: 400px;
+        border-radius: $space-s;
+        @include large-screen { 
+            max-width: 100%;
+            max-height: 500px;
+        }
+    }
+    &-caption {
+        color: colors-map($colors,green,secondary);
+    }
+}
+
+
+// .Features {
+//     &-single {
+//         display: flex;
+//         flex-direction: column;
+//         margin-bottom: $space-l;
+//         text-align: center;
+//         @include large-screen { 
+//             align-items: center;
+//             flex-direction: row;
+//             &:last-of-type {
+//                 .Features-photo {
+//                     order: 2;
+//                 }
+//             }
+//         }
+       
+//     }
+//     &-description {
+//         text-align: center;
+//         @include large-screen { 
+//             flex-basis: 50%;
+//         }
+//     }
+//     &-photo {
+//         order: 2;
+//         @include large-screen { 
+//             order: initial;
+//             flex-basis: 50%;
+          
+//         }
+//     }
+//     &-img {
+//         width: 100%;
+//         height: 40vh;
+//         max-height: 200px;
+//         max-width: 400px;
+//         border-radius: $space-s;
+//         @include large-screen { 
+//             max-width: 100%;
+//             max-height: 500px;
+//         }
+//     }
+//     &-caption {
+//         color: colors-map($colors,green,secondary);
+//     }
+// }

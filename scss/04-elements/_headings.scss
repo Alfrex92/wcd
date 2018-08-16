@@ -1,0 +1,62 @@
+.t0 {
+  @include font(title1);
+  @include large-screen {
+      @include font(title0);
+  }
+}
+
+.t1 {
+  @include font(title2);
+  @include large-screen {
+      @include font(title1);
+  }
+
+}
+
+.t2 {
+  @include font(title3);
+  @include large-screen {
+    @include font(title2);
+  }
+}
+
+.t3 {
+  @include font(base);
+  @include large-screen {
+    @include font(title3);
+  }
+
+}
+
+.base {
+    @include font(small);
+    @include medium-screen {
+        @include font(base);
+    }
+
+}
+
+small,
+.small {
+    @include font(smaller);
+    @include medium-screen {
+        @include font(small);
+    }
+
+}
+
+.smaller {
+  @include font(smaller);
+}
+
+
+.SectionHeader {
+    margin-bottom: $space-m;
+    text-align: center;
+    color: colors-map($colors,green,base);
+    @include font(title3);
+    @include large-screen {
+        margin-bottom: $space-l;
+        @include font(title2);
+    }
+}

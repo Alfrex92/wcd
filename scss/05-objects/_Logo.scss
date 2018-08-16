@@ -1,0 +1,12 @@
+.Logo {
+    display: block;
+    &-img {
+        display: flex;
+        max-width: 100px;
+        height: 50px;
+        @include large-screen {
+            height: rem(70px);
+        }
+
+    }
+}

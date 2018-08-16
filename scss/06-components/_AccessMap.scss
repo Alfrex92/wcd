@@ -1,0 +1,39 @@
+.AccessMap {
+	&-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-img {
+		width: 100%;
+		padding-left: $space-m;
+		padding-right: $space-m;
+        max-width: 600px;
+
+	}
+
+	&-illustration {
+		order: 2;
+        text-align: center;
+		@include large-screen {
+			flex-basis: 50%;
+		}
+	}
+
+	&-description {
+		margin-top: 0;
+		padding-bottom: 0;
+
+		.Cover-description {
+			border: none;
+		}
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	&-subheader {
+		color: colors-map($colors,green,base);
+	}
+}

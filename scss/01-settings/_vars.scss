@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1500px !default;
+
+$content-width : 1420px !default;
+
+$navbarSize: 55px;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

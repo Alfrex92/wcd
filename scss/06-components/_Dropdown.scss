@@ -1,0 +1,10 @@
+.Dropdown {
+    &-panel {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        transition: max-height .4s;
+        overflow: hidden;
+    }
+}
+

@@ -1,0 +1,44 @@
+.Navbar {
+	display: flex;
+	justify-content: space-between;
+	padding: $space-m;
+	align-items: center;
+	font-size: 1rem;
+	max-width: rem(1200px);
+	margin:0 auto;
+	&-right {
+		display: none;
+		@include large-screen {
+			display: flex;
+            align-items: center;
+			.Dropdown {
+				position: relative;
+				&-panel {
+					position: absolute;
+                    width: 100px;
+                    text-align: center;
+                    left: -15px;
+                    background-color: white;
+                    box-shadow: 0 10px 6px -6px #777;
+                    border-bottom-left-radius: $space-s;
+                    border-bottom-right-radius: $space-s;
+                    a:hover {
+                        color: colors-map($colors,green,secondary);
+                    }
+
+				}
+			}
+		}
+	}
+	&-menu {
+        @include large-screen {
+            display: none;
+        }
+	}
+    &-link {
+        display: block;
+        padding-left: $space-s;
+        padding-right: $space-m;
+
+      }
+}

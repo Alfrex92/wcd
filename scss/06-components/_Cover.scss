@@ -1,0 +1,59 @@
+.Cover {
+    @include large-screen {
+        display: flex;
+        max-width: rem(1200px);
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        padding: $space-m;
+    }
+    &-container {
+        padding: 1rem;
+        @include large-screen {
+            padding: 0;
+            flex-basis: 50%;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        height: 30vh;
+        background: url('/static/img/cover-photo.jpg') center no-repeat;
+        background-size: cover;
+        @include large-screen {
+            flex-basis: 50%;
+            order: 2;
+            height: 100vh;
+            max-width: 600px;
+            max-height: 500px;
+            border-radius: $space-s;
+        }
+    }
+    &-room {
+        @include large-screen {
+            max-height: 400px;
+        }
+
+    }
+    &-description {
+        flex-basis: 50%;
+        margin-top: -$space-l;
+        padding: $space-m;
+        background-color: white;
+        border: 1px solid rgba(37, 39, 41, .05);
+        @include large-screen {
+            margin-top: 0;
+            border: none;
+        }
+    }
+    &-subheader {
+        color: colors-map($colors,green,base);
+        font-weight: $w7;
+    }
+    &-header {
+        margin-bottom: $space-s;
+        @include large-screen {
+            margin-bottom: $space-m;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.Btn {
+	width: 100%;
+  	text-align: center;
+	&-link {
+		// display:inline-block;
+		// padding: $space-xs $space-m;
+		// margin-bottom: $space-xs;
+		// text-align: center;
+		// border-radius: $space-s;
+		// color:white;
+		// background-color: colors-map($colors,green,base);
+		// box-shadow: 0px $space-xs 0px 0px rgb(24, 173, 86);
+        display:inline-flex;
+        align-items: center;
+        padding: $space-xs $space-m;
+        border-radius: $space-s;
+        color:white;
+        background-color: colors-map($colors,green,base);
+	}
+    &--white {
+        color: colors-map($colors,green,secondary);
+        background-color: white;
+      }
+
+
+}

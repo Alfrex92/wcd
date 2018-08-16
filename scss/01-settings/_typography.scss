@@ -1,0 +1,122 @@
+/**
+ * Basic typography style for copy text
+ */
+
+ /* ==========================================================================
+    Yu Gothic
+    ========================================================================== */
+ @font-face {
+   font-family: "xYuGothic";
+   font-weight: normal;
+   src: local( "YuGothic-Medium" ),  /* win postscript */
+        local( "Yu Gothic Medium" ), /* win fill name (for Chrome) */
+        local( "YuGo-Medium" ),      /* mac postscript */
+        local( "YuGothic Medium" ),  /* mac fill name (for Chrome) */
+        local( "YuGothic-Regular" ), /* Win8.1 (no Medium) */
+        local( "Yu Gothic" );        /* family name */
+ }
+ @font-face {
+   font-family: "xYuGothic";
+   font-weight: bold;
+   src: local( "YuGothic-Bold" ),  /* win postscript */
+        local( "Yu Gothic Bold" ), /* win fill name (for Chrome) */
+        local( "YuGo-Bold" ),      /* mac postscript */
+        local( "YuGothic Bold" ),  /* mac fill name (for Chrome) */
+        local( "Yu Gothic" );      /* family name */
+}
+
+
+ /* ==========================================================================
+    Yu Mincho
+    ========================================================================== */
+ @font-face {
+   font-family: "xYuMincho";
+   font-weight: normal;
+   src: local( "YuMincho-Regular" ),  /* win postscript */
+        local( "Yu Mincho Regular" ), /* win fill name (for Chrome) */
+        local( "YuMin-Medium" ),      /* mac postscript */
+        local( "YuMincho Medium" ),   /* mac fill name (for Chrome) */
+        local( "Yu Mincho" );         /* family name */
+ }
+
+ @font-face {
+   font-family: "xYuMincho";
+   font-weight: bold;
+   src: local( "YuMincho-Demibold" ),  /* win postscript */
+        local( "Yu Mincho Demibold" ), /* win fill name (for Chrome) */
+        local( "YuMin-Demibold" ),     /* mac postscript */
+        local( "YuMincho Demibold" ),  /* mac fill name (for Chrome) */
+        local( "Yu Mincho" );          /* family name */
+}
+
+/* ==========================================================================
+   debbyscript
+   ========================================================================== */
+
+
+// @font-face {
+//     font-family: 'debbyscript';
+//     src: url('fonts/debby-webfont.woff2') format('woff2'),
+//          url('fonts/debby-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+/* ==========================================================================
+   Open Sans
+   ========================================================================== */
+
+
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+$fontSansSerif : "xYuGothic",
+                 "Hiragino Kaku Gothic ProN",
+                 "Hiragino Kaku Gothic Pro",
+                 Meiryo,
+                 sans-serif;
+
+
+ // Fonts variables
+ $mainFont: 'Work Sans', sans-serif;
+
+$fontTitle: $mainFont;
+ $w4: 300;
+ $w4: 400;
+ $w6: 600;
+ $w7: 700;
+ //Font weigth
+ $normal: 400;
+ $semibold: 600;
+
+$ratio: 1.618;
+$ratio2: 1.418;
+$base:1.25rem;
+
+$t3: $base * $ratio;
+$t2: $t3 * $ratio;
+$t1: $t2 * $ratio;
+$t0: $t1 * $ratio;
+
+$s1: 1rem;
+$s2: 0.7rem;
+
+
+$lh-base: 2rem;
+$lh-small: 1.5rem;
+$lh-t3: $lh-base * $ratio2;
+$lh-t2: $lh-t3 * $ratio2;
+$lh-t1: $lh-t2 * $ratio2;
+$lh-t0: $lh-t1 * $ratio2;
+
+
+
+ $fonts: (
+         title0: $t0 $lh-t0,
+         title1: $t1 $lh-t1,
+         title2: $t2 $lh-t2,
+         title3: $t3 $lh-t3,
+         base: $base $lh-base,
+         small: $s1 $lh-small,
+         smaller: $s2 $lh-small
+ );

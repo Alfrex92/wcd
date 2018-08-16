@@ -1,0 +1,44 @@
+.GeneralInfo {
+    text-align: center;
+    @include large-screen {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $space-m;
+    @include large-screen {
+        flex-basis: 33.3%;
+    }
+
+    }
+    i {
+        font-size: em(25px);
+    }
+    .i-facebook {
+        color: colors-map($colors,green,base);
+
+    }
+    .i-clock {
+        color: colors-map($colors,green,secondary);
+
+    }
+    .i-mail {
+        color: colors-map($colors,blue,base);
+    }
+}
+
+
+.ContactForm {
+    .MultiTimeTable td {
+        width: 23.375rem;
+    }
+    .MultiTimeTable-content {
+        min-width: 32.3125rem;
+    }
+    .MultiTimeTable-title{
+        width: 14.75rem;
+    }
+}
