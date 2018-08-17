@@ -4,7 +4,8 @@ block content
     header
         navbar.Navbar
             .Logo
-                img.Logo-img
+                img.Logo-img(src="img/logo.png")
+                h1 Working Holiday Career Design
             a.Btn-link(href="") 問い合わせ
     main
         .container
@@ -15,35 +16,51 @@ block content
                         | まったく新しい​​仕事と生き方へのチャレンジ
                         | をサポートする一般社団法人です。
             section.Target.ComponentSeparation
+                i.TopLine
                 h2.Target-title.t2 こんな方が対象
                 ul.Target-list
                     li.Target-item 単なる観光ではなく”海外生活”を体験したい
                     li.Target-item 海外にも、いつでも帰れる第二のふるさとを持ちたい
                     li.Target-item しっかりとした英語や現場で通用するビジネス英語を身につけたい
-            section.Stagger.ComponentSeparation
+        section.Stagger.ComponentSeparation
+            .Stagger-container
+                i.TopLine
                 h2.Stagger-title.t2 ワーキングホリデープログラムの内容
                 .Stagger-description
                     p 本プログラムでは、ワーキングホリデーをする際のお仕事や下宿先をご用意させていただいています。
                         | お仕事については下記のコースがございます。
-                .Stagger-list
-                    .Stagger-item
+                ul.Stagger-list
+                    li.Stagger-item
                         .Stagger-picture.Stagger--barista
                         p.Stagger-option バリスタ
-                    .Stagger-item
+                    li.Stagger-item
                         .Stagger-picture.Stagger--teacher
                         p.Stagger-option 日本語教師
-                    .Stagger-item
+                    li.Stagger-item
                         .Stagger-picture.Stagger--intern
                         p.Stagger-option ビジネスインターン
-                    .Stagger-item
+                    li.Stagger-item
                         .Stagger-picture.Stagger--massagist
                         p.Stagger-option ナチュラルセラピー、マッサージセラピスト
                 p.Stagger-extra *その他、特定の職種について希望があればコンサルティングも受け付けます
+        
+        section.Event.ComponentSeparation.container
+            figure.Event-photo
+                img(src="img/event.jpg").Event-img
+            .Event-description
+                i.TopLine
+                h3.Event-title 無料説明会
+                .Event-info
+                    p 日時: ８月４日・５日
+                    p １２:００ - １３:００
+                    a(href="") 会場: 自由が丘グリーンホール
+                a(href="") 詳細
         section.CTA  
             .container.CTA-body
-            p What are you waiting?
-            p Let’s work in Australia 
-            a.Btn-link(href="") 問い合わせ      
+                p What are you waiting?
+                p Let’s work in Australia 
+                a.Btn-link(href="") 問い合わせ  
+
 
 
             

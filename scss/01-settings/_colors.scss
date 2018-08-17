@@ -24,7 +24,7 @@ $colors: (
     light: lighten(#FF3366,20)
   ),
   green : (
-    base: #00D664,
+    base: #6A5AFF,
     secondary: #00C69A,
     light: lighten(#44BBFF,20)
   ),
@@ -40,6 +40,11 @@ $colors: (
   ),
   white : (
     base: white
+  ),
+  main : (
+    base: #6A5AFF,
+    secondary: #00C69A,
+    light: lighten(#44BBFF,20)
   )
 );
 

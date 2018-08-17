@@ -1,0 +1,75 @@
+.TopLine {
+    display: block;
+    width: $space-l;
+    height: 4px;
+    background-color: colors-map($colors, main, base);
+    ;
+}
+
+.Stagger {
+    &-container {
+        padding-right: $space-m;
+        padding-left: $space-m;
+        margin-right: auto;
+        margin-left: auto;
+        @include medium-screen {
+            width: 46.75rem;
+        }
+        @include large-screen {
+            width: 62rem;
+        }
+        @include extra-large-screen { 
+            width: 75rem;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: $space-m;
+        &:nth-last-of-type() {
+            margin-bottom: 0;
+        }
+        @include medium-screen {
+            flex-basis: 50%;
+            margin-bottom: $space-l;
+        }
+        @include large-screen {
+            flex-basis: 25%;
+            &:nth-of-type(3) {
+                margin-top: $space-xl;
+            }
+            &:nth-of-type(2) {
+                margin-top: ($space-xl*2);
+            }
+            &:nth-of-type(1) {
+                margin-top: ($space-xl*4);
+            }
+        }
+    }
+    &-picture {
+        margin-bottom: $space-m;
+        padding-bottom: 40%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        @include large-screen { 
+            padding-bottom: 60%;
+        }
+    }
+    &--barista {
+        background-image: url('./img/barista.svg');
+    }
+    &--intern {
+        background-image: url('./img/intern.svg');
+    }
+    &--massagist {
+        background-image: url('./img/massagist.svg');
+    }
+    &--teacher {
+        background-image: url('./img/teacher.svg');
+    }
+}

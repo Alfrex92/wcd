@@ -1,0 +1,18 @@
+.Event {
+    display: flex;
+    flex-direction: column;
+    @include large-screen { 
+        flex-direction: row;
+        align-items: center;
+    }
+    &-photo {
+        flex-basis: 48%;
+        order: 2;
+    }
+    &-description {
+        @include large-screen { 
+            flex-basis: 50%;
+            order: 2;
+        }
+    }
+}
