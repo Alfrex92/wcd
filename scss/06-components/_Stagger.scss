@@ -29,9 +29,25 @@
             width: 75rem;
         }
     }
+    &-header {
+        @include large-screen { 
+            width: 50%;
+        }
+    }
+    &-title {
+        text-align: center;
+    }
     &-list {
         display: flex;
         flex-wrap: wrap;
+        @include large-screen { 
+            margin-top: -$space-xl
+        }
+    }
+    &-description {
+        margin-top: $space-m;
+        margin-bottom: $space-m;
+        text-align: center;
     }
     &-item {
         flex-basis: 100%;

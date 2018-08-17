@@ -1,13 +1,53 @@
 .Target {
     padding: $space-m 0;
-    background-color: colors-map($colors,gray,base);
+    background-color: colors-map($colors, gray, base);
     &-title {
         margin-bottom: $space-m;
         text-align: center;
     }
     &-item {
-        span {
-            color: rgba(148,111,255,1);
+        margin-bottom: $space-s;
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
+    @include large-screen {
+        &-container {
+            display: flex;
+            align-items: center;
+            padding: $space-l 0;
+        }
+        &-description {
+            flex-basis: 50%;
+        }
+        &-illustration {
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+        }
+        &-picture {
+            width: em(160px);
+            height: em(160px);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+        &--01 {
+            background-image: url('./img/target-1.png');
+        }
+        &--02 {
+            background-image: url('./img/target-2.png');
+            margin-bottom: $space-m;
+
+        }
+        &--03 {
+            background-image: url('./img/target-3.png');
+        }
+    }
+}
+
+.i-check {
+    position: relative;
+    top: 2px;
+    color: rgba(148, 111, 255, 1);
 }

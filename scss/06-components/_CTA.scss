@@ -1,92 +1,31 @@
 .CTA {
-    background: linear-gradient(to right, #11998e, #38ef7d); 
+	position: relative;
+	padding: $space-m 0;
+	background: url('./img/cta.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	text-align: center;
 	color: white;
-
-	&-question {
-		font-weight: 700;
+	@include large-screen { 
+		padding: $space-xl 0;
 	}
-
-	&-info {
-		padding: $space-m;
-		@include large-screen {
-			padding: $space-l;
-		}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: black;
+		opacity: .5;
 	}
-    &-caption {
-        margin-top: $space-m;
-        font-size: $space-m;
-        font-weight: 700;
-      }
-
-
-	&-br{
-        @include large-screen {
-            display: block;
-        }
-
-    }
-
+	&-body {
+		position: relative;
+	}
 	&-text {
-		margin: $space-m 0;
+		margin: $space-s 0;
 	}
+	
 }
 
-
-// .CTA {
-//     position: relative;
-//     &-bg {
-//         position: relative;
-//         @include large-screen {
-//             display: flex;
-//             justify-content: space-between;
-//         }
-//     }
-//
-//     &-bgLeft {
-//         background: url('/static/img/green-hall-front.jpg') no-repeat;
-//         padding-bottom: 60%;
-//         background-size: cover;
-//     }
-//     &-bgRight {
-//         display: none;
-//         background: url('/static/img/green-hall-other.jpg') no-repeat;
-//         @include large-screen {
-//             display: block;
-//         }
-//     }
-//     &-bgLeft, &-bgRight {
-//         @include large-screen {
-//             flex-basis: 49.5%;
-//             background-size: 100%;
-//             padding-bottom: 30%;
-//         }
-//     }
-//     &-body {
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         @include large-screen {
-//             width: 100%;
-//         }
-//     }
-//     &-info {
-//         padding: $space-s;
-//         border-radius: 1rem;
-//         background-color: rgba(255,255,255, 0.8);
-//         @include large-screen {
-//             width: 50%;
-//             margin: 0 auto;
-//             padding: $space-l;
-//
-//         }
-//     }
-//     &-text {
-//         text-align: center;
-//         margin-bottom: $space-m;
-//     }
-// }
-//
