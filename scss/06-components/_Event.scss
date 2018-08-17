@@ -10,6 +10,8 @@
         order: 2;
     }
     &-description {
+        margin-bottom: $space-m;
+        text-align: center;
         @include large-screen { 
             flex-basis: 50%;
             order: 2;

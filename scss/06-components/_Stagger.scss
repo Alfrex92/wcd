@@ -1,9 +1,16 @@
 .TopLine {
-    display: block;
-    width: $space-l;
-    height: 4px;
-    background-color: colors-map($colors, main, base);
-    ;
+    display: flex;
+    justify-content: center;
+    &-line {
+        width: $space-l;
+        display: block;
+        height: 4px;
+        background-color: colors-map($colors, main, base);
+    }
+    &--separation {
+        margin-bottom: $space-s;
+    }
+    
 }
 
 .Stagger {

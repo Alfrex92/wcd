@@ -3,29 +3,43 @@ extends templates/template.pug
 block content
     header
         navbar.Navbar
-            .Logo
+            a.Logo(href="/")
                 img.Logo-img(src="img/logo.png")
-                h1 Working Holiday Career Design
+                h1.Logo-title Working Holiday Career Design
             a.Btn-link(href="") 問い合わせ
     main
-        .container
-            section.Company.ComponentSeparation
-                .Company-description
-                    p WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、
-                        | ワーキングホリデーを利用した、
-                        | まったく新しい​​仕事と生き方へのチャレンジ
-                        | をサポートする一般社団法人です。
-            section.Target.ComponentSeparation
-                i.TopLine
-                h2.Target-title.t2 こんな方が対象
+        
+        section.Company.ComponentSeparation.container
+            .Company-description
+                p WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、
+                    | ワーキングホリデーを利用した、
+                    | まったく新しい​​仕事と生き方へのチャレンジ
+                    | をサポートする一般社団法人です。
+        section.Target.ComponentSeparation
+            .container
+                span.TopLine.TopLine--separation
+                    i.TopLine-line
+                h2.Target-title.t3 こんな方が対象
                 ul.Target-list
-                    li.Target-item 単なる観光ではなく”海外生活”を体験したい
-                    li.Target-item 海外にも、いつでも帰れる第二のふるさとを持ちたい
-                    li.Target-item しっかりとした英語や現場で通用するビジネス英語を身につけたい
+                    li.Target-item 
+                        span ✔
+                        |  日本のパスポートを持っている方
+                    li.Target-item 
+                        span ✔
+                        |  単なる観光ではなく”海外生活”を体験したい
+                    li.Target-item 
+                        span ✔
+                        |  海外にも、いつでも帰れる第二のふるさとを持ちたい
+                    li.Target-item 
+                        span ✔
+                        |  しっかりとした英語や現場で通用するビジネス英語を身につけたい
+        section.Phrase.ComponentSeparation
+            h2.t2 Without any cost, we help you to find a job in Australia!
         section.Stagger.ComponentSeparation
             .Stagger-container
-                i.TopLine
-                h2.Stagger-title.t2 ワーキングホリデープログラムの内容
+                span.TopLine.TopLine--separation
+                    i.TopLine-line
+                h2.Stagger-title.t3 ワーキングホリデープログラムの内容
                 .Stagger-description
                     p 本プログラムでは、ワーキングホリデーをする際のお仕事や下宿先をご用意させていただいています。
                         | お仕事については下記のコースがございます。
@@ -48,13 +62,14 @@ block content
             figure.Event-photo
                 img(src="img/event.jpg").Event-img
             .Event-description
-                i.TopLine
+                span.TopLine.TopLine--separation
+                    i.TopLine-line
                 h3.Event-title 無料説明会
                 .Event-info
                     p 日時: ８月４日・５日
                     p １２:００ - １３:００
                     a(href="") 会場: 自由が丘グリーンホール
-                a(href="") 詳細
+                a.Btn-link(href="https://www.facebook.com/events/212577709415588/") 詳細
         section.CTA  
             .container.CTA-body
                 p What are you waiting?

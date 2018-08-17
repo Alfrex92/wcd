@@ -1,12 +1,13 @@
 .Logo {
     display: block;
+    width: em(100px);
     &-img {
         display: flex;
-        max-width: 100px;
-        height: 50px;
-        @include large-screen {
-            height: rem(70px);
-        }
-
+        margin-bottom: 4px;
+    }
+    &-title {
+        font-size: em(10px);
+        line-height: em(14px);
+        text-align: center;
     }
 }

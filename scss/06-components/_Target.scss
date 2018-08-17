@@ -1,0 +1,13 @@
+.Target {
+    padding: $space-m 0;
+    background-color: colors-map($colors,gray,base);
+    &-title {
+        margin-bottom: $space-m;
+        text-align: center;
+    }
+    &-item {
+        span {
+            color: rgba(148,111,255,1);
+        }
+    }
+}
