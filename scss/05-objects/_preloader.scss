@@ -1,155 +1,85 @@
-.preloader {
-    position: absolute;
-    z-index: z-index(preloader);
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    top: 0;
-    bottom: 0;
+$size:1.4em;
+$dotCount:10;
+$animationTime:2.5s;
+
+.peeek-loading{
+	background-color: white;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+    z-index: z-index(alpha);
+}
+.peeek-loading ul{
+	position: absolute;
+	left: calc(50% - 0.7em);
+	top: calc(50% - 4.2em);
+	display: inline-block;
+	text-indent:$size*2;
+}
+.peeek-loading ul li:after,
+.peeek-loading ul:after{
+	width: $size;
+	height: $size;
+	background-color: colors-map($colors,main,base);
+    ;
+	border-radius: 100%;
+}
+.peeek-loading ul li:after,
+.peeek-loading ul:after{
+	content:"";
+	display: block;
+}
+.peeek-loading ul:after{
+	position: absolute;
+	top: $size*2;
+}
+.peeek-loading li{
+	position: absolute;
+	padding-bottom: $size*4;
+	top: 0;
+	left: 0;
 }
 
-@-webkit-keyframes enter {
-  0% {
-    opacity: 0;
-    top: -10px;
+// Creating Circle and Animation Delay
+@for $i from 1 through 10{
+  .peeek-loading li:nth-child(#{$i}){
+	  $deg:($i - 1)*(360deg/$dotCount);
+	  transform: rotate($deg);
+	  animation-delay: $animationTime*$i/$dotCount/2;
   }
-  5% {
-    opacity: 1;
-    top: 0px;
-  }
-  50.9% {
-    opacity: 1;
-    top: 0px;
-  }
-  55.9% {
-    opacity: 0;
-    top: 10px;
-  }
-}
-@keyframes enter {
-  0% {
-    opacity: 0;
-    top: -10px;
-  }
-  5% {
-    opacity: 1;
-    top: 0px;
-  }
-  50.9% {
-    opacity: 1;
-    top: 0px;
-  }
-  55.9% {
-    opacity: 0;
-    top: 10px;
-  }
-}
-@-moz-keyframes enter {
-  0% {
-    opacity: 0;
-    top: -10px;
-  }
-  5% {
-    opacity: 1;
-    top: 0px;
-  }
-  50.9% {
-    opacity: 1;
-    top: 0px;
-  }
-  55.9% {
-    opacity: 0;
-    top: 10px;
+  .peeek-loading li:nth-child(#{$i}):after{
+	  animation-delay: $animationTime*$i/$dotCount/2;
   }
 }
 
-
-.loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -27.5px;
-  margin-top: -27.5px;
+// Animations
+.peeek-loading li{
+  animation: dotAnimation $animationTime infinite;
+}
+@keyframes dotAnimation {
+0%, 55%, 100%    {
+	padding: 0 0 $size*4 0;
+	}
+5%,50%   {
+	padding: $size*2 0;
+	}
 }
 
-.square {
-  background: colors-map($colors,pink,base);
-  ;
-  width: 15px;
-  height: 15px;
-  float: left;
-  top: -10px;
-  margin-right: 5px;
-  margin-top: 5px;
-  position: relative;
-  opacity: 0;
-  -webkit-animation: enter 6s infinite;
-  animation: enter 6s infinite;
+.peeek-loading li:after{
+  animation: dotAnimationTwo $animationTime infinite;
 }
-
-.enter {
-  top: 0px;
-  opacity: 1;
-}
-
-.square:nth-child(1) {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-}
-
-.square:nth-child(2) {
-  -webkit-animation-delay: 2.1s;
-  -moz-animation-delay: 2.1s;
-  animation-delay: 2.1s;
-}
-
-.square:nth-child(3) {
-  -webkit-animation-delay: 2.4s;
-  -moz-animation-delay: 2.4s;
-  animation-delay: 2.4s;
-  background-color: colors-map($colors,blue,base);
-
-}
-
-.square:nth-child(4) {
-  -webkit-animation-delay: 0.9s;
-  -moz-animation-delay: 0.9s;
-  animation-delay: 0.9s;
-}
-
-.square:nth-child(5) {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-}
-
-.square:nth-child(6) {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-}
-
-.square:nth-child(8) {
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-
-.square:nth-child(9) {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-
-.clear {
-  clear: both;
-}
-
-.last {
-  margin-right: 0;
-}
-
-.preloader + #root:not(:empty) {
-  display: none;
+@-webkit-keyframes dotAnimationTwo {
+0%, 55%, 100%   {
+	opacity:1;
+	transform: scale(1);
+	}
+5%,50%  {
+	opacity: .5;
+	transform: scale(0.5);
+	}
 }

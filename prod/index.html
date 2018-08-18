@@ -29,19 +29,40 @@
     <link rel="mask-icon" href="./img/fav/safari-pinned-tab.svg" color="#6A5AFF"/>
     <meta name="msapplication-TileColor" content="#6A5AFF"/>
     <meta name="google-site-verification" content="cxPyPrRkWSsGLX80swYOSpbzgcmjFSa6SeTGFcleYaE"/>
-    <link rel="stylesheet" href="https://file.myfontastic.com/TsjCyXKuNQAFPhexyFWxUc/icons.css"/>
     <link rel="stylesheet" href="main.css?iumgqi"/>
     <!-- add here typography icons-->
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <div class="peeek-loading">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
     <header>
       <navbar class="Navbar"><a class="Logo" href="/"><img class="Logo-img" src="img/logo.png"/>
-          <h1 class="Logo-title">Working Holiday Career Design</h1></a><a class="Btn-link" href="">問い合わせ</a></navbar>
+          <h1 class="Logo-title">Working Holiday Career Design</h1></a><a class="Btn-link" href="#contactform">問い合わせ</a></navbar>
     </header>
-    <main>
+    <div class="Cover ComponentSeparation">
+      <div class="Cover-body container">
+        <h2 class="t2 Cover-title">If you are <span>Japanese</span>, want to <span>work abroad </span>&amp; improve your <span>english</span></h2><span class="TopLine"><i class="TopLine-line"></i></span>
+        <p class="Cover-caption t3"> We can help you</p>
+      </div>
+    </div>
+    <main>   
       <section class="Company ComponentSeparation container">
         <div class="Company-description">
-          <p>
+          <p class="t3">
             WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、ワーキングホリデーを利用した、
             まったく新しい​​仕事と生き方へのチャレンジ
             をサポートする一般社団法人です。
@@ -82,19 +103,19 @@
             </div>
           </div>
           <ul class="Stagger-list">
-            <li class="Stagger-item">
+            <li class="Stagger-item -stagger">
               <div class="Stagger-picture Stagger--barista"></div>
               <p class="Stagger-option">バリスタ</p>
             </li>
-            <li class="Stagger-item">
+            <li class="Stagger-item -stagger">
               <div class="Stagger-picture Stagger--teacher"></div>
               <p class="Stagger-option">日本語教師</p>
             </li>
-            <li class="Stagger-item">
+            <li class="Stagger-item -stagger">
               <div class="Stagger-picture Stagger--intern"></div>
               <p class="Stagger-option">ビジネスインターン</p>
             </li>
-            <li class="Stagger-item">
+            <li class="Stagger-item -stagger">
               <div class="Stagger-picture Stagger--massagist"></div>
               <p class="Stagger-option">ナチュラルセラピー、マッサージセラピスト</p>
             </li>
@@ -113,12 +134,37 @@
       </section>
       <section class="CTA ComponentSeparation"> 
         <div class="container CTA-body">
-          <p class="t2">Don't you want to live overseas?</p>
+          <h4 class="t2">Don't you want to live overseas?</h4>
           <div class="CTA-text"> 
-            <p>This is your chance. </p>
             <p>Australia is waiting for you!</p>
-          </div><a class="Btn-link" href="">問い合わせ  </a>
+            <p>Contact Us!</p>
+          </div>
         </div>
+      </section>
+      <section class="ContactForm container" id="contactform"><span class="TopLine TopLine--separation"><i class="TopLine-line"></i></span>
+        <h3 class="t3 ContactForm-title">問い合わせ</h3>
+        <form class="wufoo ContactForm-form" name="form2" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate="" action="https://alfrexro92.wufoo.com/forms/me374oz1ix9uvu/#public">
+          <p class="ContactForm-ele">
+            <label class="ContactForm-label" for="Field1">My name is</label>
+            <input class="ContactForm-input" id="Field1" name="Field1" type="text" value="" maxlength="255" tabindex="1" onkeyup="" required="required" placeholder=""/>
+          </p>
+          <p class="ContactForm-ele">
+            <label class="ContactForm-label" for="Field2">My email address is</label>
+            <input class="ContactForm-input field text medium" id="Field2" name="Field2" type="email" spellcheck="false" value="" maxlength="255" tabindex="2" placeholder="" required="required"/>
+          </p>
+          <div class="ContactForm-info">
+            <p class="ContactForm-ele ContactForm-description">
+              <label class="ContactForm-label ContactForm-m-label" for="Field5"> I would like to ask you...</label>
+              <textarea class="ContactForm-textarea" name="Field5" spellcheck="true" rows="10" cols="50" tabindex="3" onkeyup="" placeholder=""></textarea>
+            </p>
+          </div>
+          <input class="Btn-link ContactForm-submit" name="saveForm" type="submit" value="送信する"/>
+          <div class="hide">
+            <label for="comment">Do Not Fill This Out</label>
+            <textarea id="comment" name="comment" rows="1" cols="1"></textarea>
+            <input id="idstamp" type="hidden" name="idstamp" value="q+vLcMRn1AP24m+0J9RcJavqU6NACVS65JsmPhGPRcQ="/>
+          </div>
+        </form>
       </section>
       <footer class="Bottom"><a class="Bottom-link" href="https://www.facebook.com/wcd.workingholiday/" target="_blank"><i class="i-facebook"></i></a></footer>
     </main>

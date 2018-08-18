@@ -1,15 +1,97 @@
 .ContactForm {
-    h1 {
-        text-align: center;
-    }
+    width: 100%;
+	@include medium-screen {
+		max-width: 700px;
+	}
     &-title {
-        margin: $space-m 0;
-        color: colors-map($colors,green,base);
-    }
-    &-btn {
-        margin-bottom: $space-l;
+        margin-bottom: $space-m;
         text-align: center;
-        font-size: 2rem;
-        line-height: 3rem;
     }
+	&-general {
+		@include medium-screen {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&-form {
+		text-align: center;
+	}
+
+	&-ele {
+		@include medium-screen {
+			display: flex;
+			justify-content: center;
+			margin-bottom: $space-m;
+		}
+	}
+
+	&-label {
+		display: block;
+		margin-bottom: 15px;
+		font-weight: bold;
+		@include medium-screen {
+			margin-right: 15px;
+			margin-bottom: 0;
+			align-self: center;
+			width: 40%;
+			text-align: left;
+		}
+	}
+
+	&-input,
+	&-textarea {
+		border: none;
+		outline: none;
+		border-radius: 0;
+		padding: 8.5px;
+		border-bottom: 2px dashed #424242;
+		box-sizing: border-box;
+		margin-bottom: 52px;
+		cursor: text;
+
+		&:focus {
+			border-bottom: 2px dashed colors-map($colors,main,base);
+            background-color: colors-map($colors,gray, base);
+        }
+		@include medium-screen {
+			margin-bottom: 0;
+			width: 50%;
+		}
+	}
+
+	&-textarea {
+		overflow-y: scroll;
+		resize: none;
+		width: 90%;
+		height: 100px;
+        margin-bottom: 20px;
+		@include medium-screen {
+            margin-bottom: 0;
+			height: 200px;
+			width: 100%;
+		}
+	}
+
+	&-description {
+		@include medium-screen {
+			display: block;
+            margin-bottom: 20px;
+		}
+	}
+
+	&-m-label {
+		margin-bottom: 15px;
+		text-align: center;
+		width: 100%;
+	}
+
+    &-submit {
+    border: 0;
+    font: inherit;
+    }
+}
+
+.hide {
+    display: none;
 }

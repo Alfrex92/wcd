@@ -5,12 +5,12 @@ html(lang=`${lang_}`)
         head
             include ../config/metas
             block css-include
-            link(rel="stylesheet" href='https://file.myfontastic.com/TsjCyXKuNQAFPhexyFWxUc/icons.css')
+            //- link(rel="stylesheet" href='https://file.myfontastic.com/TsjCyXKuNQAFPhexyFWxUc/icons.css')
             link(rel="stylesheet" href="main.css?iumgqi")
             // add here typography icons
 
         body
-            //- include partials/preloader
+            include partials/preloader
 
             block content
         
@@ -21,5 +21,3 @@ html(lang=`${lang_}`)
 
             script(src='./bundle.js', async='')
                
-
-

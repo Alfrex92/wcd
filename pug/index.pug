@@ -6,12 +6,22 @@ block content
             a.Logo(href="/")
                 img.Logo-img(src="img/logo.png")
                 h1.Logo-title Working Holiday Career Design
-            a.Btn-link(href="") 問い合わせ
-    main
-        
+            a.Btn-link(href="#contactform") 問い合わせ
+    .Cover.ComponentSeparation
+        .Cover-body.container
+            h2.t2.Cover-title If you are 
+                span Japanese
+                |, want to 
+                span work abroad 
+                | &amp; improve your 
+                span english
+            span.TopLine
+                        i.TopLine-line
+            p.Cover-caption.t3  We can help you
+    main    
         section.Company.ComponentSeparation.container
             .Company-description
-                p WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、
+                p.t3 WCD《一般社団法人ワーキングホリデーキャリアデザイン協会》は、
                     | ワーキングホリデーを利用した、
                     | まったく新しい​​仕事と生き方へのチャレンジ
                     | をサポートする一般社団法人です。
@@ -53,16 +63,16 @@ block content
                         p 本プログラムでは、ワーキングホリデーをする際のお仕事や下宿先をご用意させていただいています。
                             span.breakResponsive お仕事については下記のコースがございます。
                 ul.Stagger-list
-                    li.Stagger-item
+                    li.Stagger-item.-stagger
                         .Stagger-picture.Stagger--barista
                         p.Stagger-option バリスタ
-                    li.Stagger-item
+                    li.Stagger-item.-stagger
                         .Stagger-picture.Stagger--teacher
                         p.Stagger-option 日本語教師
-                    li.Stagger-item
+                    li.Stagger-item.-stagger
                         .Stagger-picture.Stagger--intern
                         p.Stagger-option ビジネスインターン
-                    li.Stagger-item
+                    li.Stagger-item.-stagger
                         .Stagger-picture.Stagger--massagist
                         p.Stagger-option ナチュラルセラピー、マッサージセラピスト
                 p.Stagger-extra.small *その他、特定の職種について希望があればコンサルティングも受け付けます
@@ -79,11 +89,30 @@ block content
                 a.Btn-link(href="https://www.facebook.com/events/212577709415588/") 詳細
         section.CTA.ComponentSeparation  
             .container.CTA-body
-                p.t2 Don't you want to live overseas?
+                h4.t2 Don't you want to live overseas?
                 .CTA-text 
-                    p This is your chance. 
                     p Australia is waiting for you!
-                a.Btn-link(href="") 問い合わせ  
+                    p Contact Us!
+        section.ContactForm.container#contactform
+            span.TopLine.TopLine--separation
+                    i.TopLine-line
+            h3.t3.ContactForm-title 問い合わせ
+            form.wufoo.ContactForm-form(name='form2', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://alfrexro92.wufoo.com/forms/me374oz1ix9uvu/#public')
+                p.ContactForm-ele
+                    label.ContactForm-label(for='Field1') My name is
+                    input.ContactForm-input( id="Field1" name="Field1" type="text" value="" maxlength="255" tabindex="1" onkeyup=""  required placeholder="")
+                p.ContactForm-ele
+                    label.ContactForm-label(for='Field2') My email address is
+                    input.ContactForm-input(id="Field2" name="Field2" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" placeholder="" required)
+                .ContactForm-info
+                    p.ContactForm-ele.ContactForm-description
+                        label.ContactForm-label.ContactForm-m-label(for='Field5')  I would like to ask you...
+                        textarea.ContactForm-textarea(name='Field5', spellcheck='true', rows='10', cols='50', tabindex='3', onkeyup='', placeholder='')
+                input.Btn-link.ContactForm-submit(name='saveForm', type='submit', value='送信する')
+                .hide
+                    label(for='comment') Do Not Fill This Out
+                    textarea#comment(name='comment', rows='1', cols='1')
+                    input#idstamp(type="hidden" name="idstamp" value="q+vLcMRn1AP24m+0J9RcJavqU6NACVS65JsmPhGPRcQ=")  
         footer.Bottom
             a.Bottom-link(href="https://www.facebook.com/wcd.workingholiday/" target="_blank")
                 i.i-facebook
