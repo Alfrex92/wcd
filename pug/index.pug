@@ -1,4 +1,6 @@
 extends templates/template.pug
+block metas
+    meta(name='robots', content='index, follow')
 
 block content
     header
@@ -93,7 +95,7 @@ block content
                 .CTA-text 
                     p Australia is waiting for you!
                     p Contact Us!
-        section.ContactForm.container#contactform
+        section.ContactForm.container.ComponentSeparation#contactform
             span.TopLine.TopLine--separation
                     i.TopLine-line
             h3.t3.ContactForm-title 問い合わせ

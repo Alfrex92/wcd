@@ -10,7 +10,7 @@
     &--separation {
         margin-bottom: $space-s;
     }
-    
+
 }
 
 .Stagger {
@@ -25,12 +25,12 @@
         @include large-screen {
             width: 62rem;
         }
-        @include extra-large-screen { 
+        @include extra-large-screen {
             width: 75rem;
         }
     }
     &-header {
-        @include large-screen { 
+        @include large-screen {
             width: 50%;
         }
     }
@@ -40,7 +40,7 @@
     &-list {
         display: flex;
         flex-wrap: wrap;
-        @include large-screen { 
+        @include large-screen {
             margin-top: -$space-xl
         }
     }
@@ -53,6 +53,11 @@
         flex-basis: 100%;
         text-align: center;
         margin-bottom: $space-m;
+        opacity: 0;
+        &.fade {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
         &:nth-last-of-type() {
             margin-bottom: 0;
         }
@@ -79,7 +84,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 50%;
-        @include large-screen { 
+        @include large-screen {
             padding-bottom: 60%;
         }
     }
